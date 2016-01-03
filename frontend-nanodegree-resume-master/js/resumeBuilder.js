@@ -6,17 +6,7 @@
 //funThoughts = awesomeThoughts.replace("AWESOME","FUN");
 //$("#main").append(funThoughts);
 
-//var formattedRole = HTMLheaderRole.replace("%data%", "Front End Web Developer");
-//$("#header").prepend(formattedRole);
-//var formattedName = HTMLheaderName.replace("%data%", "Janusz Eisse");
-//$("#header").prepend(formattedName);
 
-
-//var work = {};
-//work.position = "Mediengestalter Digital und Print";
-//work.employer = "Agentur Bemberg GmbH";
-//work.years = "3 Years";
-//work.city = "Wuppertal";
 
 var work = {
 	"jobs" : [
@@ -24,7 +14,7 @@ var work = {
 		"employer" : "Agentur Bemberg GmbH",
 		"title" : "Mediengestalter Digital und Print",
 		"location" : "Wuppertal, Germany",
-		"dates" : "2012 - ",
+		"dates" : "2012 - today",
 		"description" : "Design, Developing, Final Artwork, Adobe Creative Suite, TYPO3, Git, PHPStorm: HTML, CSS, LESS, JavaScript"
 	},
 	{
@@ -108,19 +98,19 @@ var education = {
 	{
 	"name" : "Front End Nano Developer Programm",
 	"organization" : "udacity",
-	"graduation" : " ... ",
+	"graduation" : "none",
 	"url" : "www.udacity.com"
 	},
 	{
 	"name" : ["Make a Website", "HTML & CSS"],
 	"organization" : "codecademy",
-	"graduation" : "",
+	"graduation" : "none",
 	"url" : "www.codecademy.com"
 	}
 ]
 };
 
-//$("#main").append(bio.name);
+//$("#main").append(bio);
 //$("#main").append(bio.role);
 //$("#main").append(bio.contact.email);
 //$("#main").append(bio.contact.phone);
