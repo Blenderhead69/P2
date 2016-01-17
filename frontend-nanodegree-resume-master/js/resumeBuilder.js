@@ -27,7 +27,7 @@ var work = {
 ]
 };
 
-var projects = {
+var projectVariable = {
 	"projects" : [
 	{
 	"title" : "Fun In The Sun",

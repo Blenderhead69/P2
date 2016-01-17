@@ -113,11 +113,34 @@ course.
      an opening and closing set of slash asterisks for block comments.
      */
 
-    var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(formattedRole);
-    var formattedName = HTMLheaderName.replace("%data%", "Janusz Eisse");
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
 
+// Internationalize Name
+//    $("#main").append(internationalizeButton);
+    //    function inName(){
+//        var name = [];
+//        name = bio.name.split(" ");
+//        name = name[0] + " " + name[1].toUpperCase();
+//        document.getElementById("name").innerHTML=name;
+//    }
+
+//     Encapsulating Functions Quiz
+    projectVariable.display = function(){
+        $("#projects").append(HTMLprojectStart);
+        for (var data in projectVariable.projects){
+            var myProject = projectVariable.projects[data];
+        var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", myProject.title);
+        console.log(formattedHTMLprojectTitle);
+        $(".project-entry").append(formattedHTMLprojectTitle);
+        }
+    }
+    projectVariable.display();
+//    $( document ).ready(function() {
+//        projectVariable.display();
+//    });
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
@@ -132,8 +155,8 @@ course.
     } else {
         alert("Geht nicht!");
     }
-var displayWork = function(){
 
+var displayWork = function(){
     for (var job in work.jobs) {
         if (work.jobs.hasOwnProperty(job)) {
             var currentJob = work.jobs[job];
