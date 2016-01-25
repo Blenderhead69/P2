@@ -7,7 +7,6 @@
 //$("#main").append(funThoughts);
 
 
-
 var work = {
 	"jobs" : [
 	{
@@ -109,6 +108,8 @@ var education = {
 	}
 ]
 };
+$("#mapDiv").append(googleMap);
+
 
 //$("#main").append(bio);
 //$("#main").append(bio.role);
