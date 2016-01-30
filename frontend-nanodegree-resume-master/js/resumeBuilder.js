@@ -99,11 +99,11 @@ var bio = {
             $("#header").append(HTMLskillsStart);
             var formattedHTMLskills = HTMLskills.replace(data, bio.skills[0]);
             $("#skills").append(formattedHTMLskills);
-            var formattedHTMLskills = HTMLskills.replace(data, bio.skills[1]);
+            formattedHTMLskills = HTMLskills.replace(data, bio.skills[1]);
             $("#skills").append(formattedHTMLskills);
-            var formattedHTMLskills = HTMLskills.replace(data, bio.skills[2]);
+            formattedHTMLskills = HTMLskills.replace(data, bio.skills[2]);
             $("#skills").append(formattedHTMLskills);
-            var formattedHTMLskills = HTMLskills.replace(data, bio.skills[3]);
+            formattedHTMLskills = HTMLskills.replace(data, bio.skills[3]);
             $("#skills").append(formattedHTMLskills);
         } else {
             alert("Doesnt work!");
@@ -186,7 +186,7 @@ var education = {
             $(".education-entry").append(formattedschoolMajor);
         }
         $(".education-entry").append(HTMLonlineClasses);
-        for (var data in education.onlineCourses) {
+        for (data in education.onlineCourses) {
             var myCourses = education.onlineCourses[data];
             var formattedonlineTitle = HTMLonlineTitle.replace("%data%", myCourses.title);
             $(".education-entry").append(formattedonlineTitle);
