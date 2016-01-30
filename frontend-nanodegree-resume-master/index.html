@@ -113,77 +113,8 @@ course.
      an opening and closing set of slash asterisks for block comments.
      */
 
-    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").prepend(formattedRole);
-    var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").prepend(formattedName);
 
-// Internationalize Name
-//    $("#main").append(internationalizeButton);
-    //    function inName(){
-//        var name = [];
-//        name = bio.name.split(" ");
-//        name = name[0] + " " + name[1].toUpperCase();
-//        document.getElementById("name").innerHTML=name;
-//    }
 
-//     Encapsulating Functions Quiz
-    projectVariable.display = function(){
-        $("#projects").append(HTMLprojectStart);
-        for (var data in projectVariable.projects){
-            var myProject = projectVariable.projects[data];
-            var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", myProject.title);
-            $(".project-entry").append(formattedHTMLprojectTitle);
-            var formattedHTMLprojectDates = HTMLprojectDates.replace("%data%", myProject.dates);
-            $(".project-entry").append(formattedHTMLprojectDates);
-            var formattedHTMLprojectDescription = HTMLprojectDescription.replace("%data%", myProject.description);
-            $(".project-entry").append(formattedHTMLprojectDescription);
-//            var formattedHTMLprojectImage = HTMLprojectImage.replace("%data%", myProject.image);
-//            $(".project-entry").append(formattedHTMLprojectImage);
-        }
-    }
-    projectVariable.display();
-//    $( document ).ready(function() {
-//        projectVariable.display();
-//    });
-
-    if (bio.skills.length > 0) {
-        $("#header").append(HTMLskillsStart);
-        var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[0]);
-        $("#skills").append(formattedHTMLskills);
-        var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[1]);
-        $("#skills").append(formattedHTMLskills);
-        var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[2]);
-        $("#skills").append(formattedHTMLskills);
-        var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[3]);
-        $("#skills").append(formattedHTMLskills);
-    } else {
-        alert("Geht nicht!");
-    }
-
-var displayWork = function(){
-    for (var job in work.jobs) {
-        if (work.jobs.hasOwnProperty(job)) {
-            var currentJob = work.jobs[job];
-            $("#workExperience").append(HTMLworkStart);
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", currentJob.employer);
-            var formattedTitle = HTMLworkTitle.replace("%data%", currentJob.title);
-            var formattedEmployerTitle = formattedEmployer + formattedTitle;
-            $(".work-entry:last").append(formattedEmployerTitle);
-            var formattedDates = HTMLworkDates.replace("%data%", currentJob.dates);
-            $(".work-entry:last").append(formattedDates);
-            var formattedLocation = HTMLworkLocation.replace("%data%", currentJob.location);
-            $(".work-entry:last").append(formattedLocation);
-            var formattedDescription = HTMLworkDescription.replace("%data%", currentJob.description);
-            $(".work-entry:last").append(formattedDescription);
-        }
-    }
-}
-    displayWork();
-    //    work.jobs.forEach(function(job) {
-    //      var HTMLemployerTitle = HTMLworkEmployer.replace("%data%", job.employer) + HTMLworkTitle.replace("%data%", job.title);
-    //      $("#workExperience").append(HTMLemployerTitle);
-    //});
 
     if (document.getElementsByClassName('flex-item').length === 0) {
         document.getElementById('topContacts').style.display = 'none';
@@ -195,8 +126,6 @@ var displayWork = function(){
     if (document.getElementsByClassName('work-entry').length === 0) {
         document.getElementById('workExperience').style.display = 'none';
     }
-
-
     if (document.getElementsByClassName('project-entry').length === 0) {
         document.getElementById('projects').style.display = 'none';
     }
