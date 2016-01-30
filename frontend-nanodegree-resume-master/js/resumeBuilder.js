@@ -93,6 +93,10 @@ var bio = {
         $header.prepend(formattedRole);
         var formattedName = HTMLheaderName.replace(data, bio.name);
         $header.prepend(formattedName);
+        var formattedContacts = HTMLmobile.replace(data, bio.contacts.mobile) + HTMLemail.replace(data, bio.contacts.email) + HTMLgithub.replace(data, bio.contacts.github) + HTMLlocation.replace(data, bio.contacts.location);
+        $header.append(formattedContacts);
+        var formattedbioPic = HTMLbioPic.replace(data, bio.biopic);
+        $header.append(formattedbioPic);
         var formattedMessage = HTMLWelcomeMsg.replace(data, bio.welcomeMessage);
         $header.append(formattedMessage);
         if (bio.skills.length > 0) {
@@ -108,8 +112,6 @@ var bio = {
         } else {
             alert("Doesnt work!");
         }
-        var formattedbioPic = HTMLbioPic.replace(data, bio.biopic);
-        $header.prepend(formattedbioPic);
     }
 };
 bio.display();
