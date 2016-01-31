@@ -1,3 +1,4 @@
+'use strict';
 // $("#main").append("JayPee");
 //var awesomeThoughts;
 //awesomeThoughts = "I am JayPee and I am AWESOME!";
@@ -95,6 +96,7 @@ var bio = {
         $header.prepend(formattedName);
         var formattedContacts = HTMLmobile.replace(data, bio.contacts.mobile) + HTMLemail.replace(data, bio.contacts.email) + HTMLgithub.replace(data, bio.contacts.github) + HTMLlocation.replace(data, bio.contacts.location);
         $header.append(formattedContacts);
+        $('#footerContacts').append(formattedContacts);
         var formattedbioPic = HTMLbioPic.replace(data, bio.biopic);
         $header.append(formattedbioPic);
         var formattedMessage = HTMLWelcomeMsg.replace(data, bio.welcomeMessage);
